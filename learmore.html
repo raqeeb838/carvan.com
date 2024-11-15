@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn More About Cars - CARVAN</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+    />
+    <!-- modal bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- end modal -->
+    <!-- link favicon icon -->
+    <link
+      rel="shortcut icon"
+      href="images/car_favicon.avif"
+      type="image/x-icon"
+    />
+
+    <!-- Bootstrap CDN FIle -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Fonts Family CDN Link -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Fonte Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+
+    <!-- Fonte Awesome CDN -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- CSS File Link -->
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .hero-image {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)
+          ),
+          url("https://static1.topspeedimages.com/wordpress/wp-content/uploads/2023/09/resize_2021_chevrolet_corvette_2021_chevrolet_corvette_c87230de-8907-492b-88b1-ed95482c01ae-pctyjo-97850-97851-scaled.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 60vh;
+        display: flex;
+        align-items: center;
+        padding-top: 50px;
+        justify-content: center;
+      }
+      .section-image {
+        height: 300px;
+        object-fit: cover;
+      }
+      .card {
+        transition: transform 0.3s ease-in-out;
+      }
+      .card:hover {
+        transform: translateY(-5px);
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header"></header>
+
+    <!-- Footer end-->
+
+    <header class="hero-image">
+      <div class="container text-center text-white">
+        <h1 class="display-2 fw-bold mb-4">Discover the World of Cars</h1>
+        <p class="lead fs-2">
+          Explore the fascinating realm of automotive engineering and design
+        </p>
+      </div>
+    </header>
+
+    <main class="container my-5">
+      <section class="mb-5">
+        <h2 class="display-4 text-center mb-4">The Evolution of Automobiles</h2>
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <img
+              src="https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+              alt="Classic and modern cars"
+              class="img-fluid rounded section-image"
+            />
+          </div>
+          <div class="col-md-6">
+            <p class="lead">
+              From the first horseless carriages to today's electric vehicles,
+              the automobile industry has come a long way. Each era brought its
+              own innovations, shaping the cars we drive today.
+            </p>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>1886:
+                First gasoline-powered automobile
+              </li>
+              <li class="list-group-item">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>1908:
+                Ford Model T introduces mass production
+              </li>
+              <li class="list-group-item">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>1938:
+                Volkswagen Beetle becomes a people's car
+              </li>
+              <li class="list-group-item">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>1997:
+                Toyota Prius pioneers hybrid technology
+              </li>
+              <li class="list-group-item">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>2008:
+                Tesla Roadster ushers in the electric era
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-5">
+        <h2 class="display-4 text-center mb-4">The Art of Automotive Design</h2>
+        <div class="row align-items-center">
+          <div class="col-md-6 order-md-2">
+            <img
+              src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+              alt="Car design sketch"
+              class="img-fluid rounded section-image"
+            />
+          </div>
+          <div class="col-md-6 order-md-1">
+            <p class="lead">
+              Automotive design is a delicate balance between form and function.
+              Designers must create vehicles that are not only aesthetically
+              pleasing but also aerodynamic, safe, and practical.
+            </p>
+            <div class="accordion" id="designAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                  >
+                    Exterior Design
+                  </button>
+                </h2>
+                <div
+                  id="collapseOne"
+                  class="accordion-collapse collapse show"
+                  data-bs-parent="#designAccordion"
+                >
+                  <div class="accordion-body">
+                    Exterior design focuses on the shape of the vehicle,
+                    including its proportions, surface treatment, and details
+                    like headlights and grilles.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                  >
+                    Interior Design
+                  </button>
+                </h2>
+                <div
+                  id="collapseTwo"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#designAccordion"
+                >
+                  <div class="accordion-body">
+                    Interior design deals with the layout of controls, seating
+                    arrangements, and the overall look and feel of the car's
+                    cabin.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"
+                  >
+                    Color and Trim
+                  </button>
+                </h2>
+                <div
+                  id="collapseThree"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#designAccordion"
+                >
+                  <div class="accordion-body">
+                    Color and trim designers select the materials, textures, and
+                    colors used both inside and outside the vehicle.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-5">
+        <h2 class="display-4 text-center mb-4">
+          Cutting-Edge Automotive Technologies
+        </h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card h-100">
+              <img
+                src="images/luxury_car.jpg"
+                class="card-img-top section-image"
+                alt="Electric car charging"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Electric Powertrains</h5>
+                <p class="card-text">
+                  Electric vehicles are becoming increasingly popular, offering
+                  zero emissions and lower running costs. Advancements in
+                  battery technology are constantly improving range and charging
+                  times.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img
+                src="images/luxury_sedan.avif"
+                class="card-img-top section-image"
+                alt="Autonomous driving"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Autonomous Driving</h5>
+                <p class="card-text">
+                  Self-driving technology is rapidly evolving, with many cars
+                  already featuring advanced driver assistance systems. Full
+                  autonomy promises to revolutionize transportation and improve
+                  road safety.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img
+                src="images/cruiser.avif"
+                class="card-img-top section-image"
+                alt="Connected car dashboard"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Connected Cars</h5>
+                <p class="card-text">
+                  Modern vehicles are becoming rolling computers, with internet
+                  connectivity, smartphone integration, and over-the-air
+                  updates. This connectivity enhances both functionality and
+                  user experience.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-5">
+        <h2 class="display-4 text-center mb-4">The Future of Mobility</h2>
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <img
+              src="https://images.unsplash.com/photo-1572635148818-ef6fd45eb394?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+              alt="Futuristic car concept"
+              class="img-fluid rounded section-image"
+            />
+          </div>
+          <div class="col-md-6">
+            <p class="lead">
+              The automotive industry is on the cusp of a revolution. From
+              flying cars to hyperloop systems, the future of transportation is
+              exciting and full of possibilities.
+            </p>
+            <div class="progress mb-3" style="height: 25px">
+              <div
+                class="progress-bar bg-success"
+                role="progressbar"
+                style="width: 75%"
+                aria-valuenow="75"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              >
+                Electric Vehicles: 75%
+              </div>
+            </div>
+            <div class="progress mb-3" style="height: 25px">
+              <div
+                class="progress-bar bg-info"
+                role="progressbar"
+                style="width: 50%"
+                aria-valuenow="50"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              >
+                Autonomous Driving: 50%
+              </div>
+            </div>
+            <div class="progress mb-3" style="height: 25px">
+              <div
+                class="progress-bar bg-warning"
+                role="progressbar"
+                style="width: 25%"
+                aria-valuenow="25"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              >
+                Flying Cars: 25%
+              </div>
+            </div>
+            <p class="mt-3">
+              These progress bars represent the estimated development and
+              adoption of future mobility technologies.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer"></footer>
+
+    <!-- Bootstrap JS CDN Link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Header Slicing in JS -->
+    <script src="header.js"></script>
+
+    <!-- Footer Slicing in JS -->
+    <script src="footer.js"></script>
+
+    <!-- JS File Link -->
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

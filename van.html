@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vans</title>
+
+    <!-- link favicon icon -->
+    <link
+      rel="shortcut icon"
+      href="images/car_favicon.avif"
+      type="image/x-icon"
+    />
+
+    <!-- Bootstrap CDN FIle -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Fonts Family CDN Link -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- CSS File Link -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Internal CSS Start -->
+    <style>
+      :root {
+        --primary-color: #04995b;
+        --secondary-color: #ff6b35;
+        --dark-color: #011627;
+        --light-color: #ffffff;
+      }
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: var(--light-color);
+        color: var(--dark-color);
+      }
+      .navbar {
+        background-color: var(--dark-color);
+      }
+      .navbar-brand,
+      .nav-link {
+        color: var(--light-color) !important;
+      }
+      .hero {
+        background-image: url("https://phoenixrentalcars.com/wp-content/uploads/2023/09/Transit-Van-Right-Facing-2023.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 75vh;
+        position: relative;
+      }
+      .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+      }
+      .hero-content {
+        position: relative;
+        z-index: 1;
+      }
+      .card {
+        transition: transform 0.3s;
+        border-color: var(--primary-color);
+      }
+      .card:hover {
+        transform: scale(1.05);
+      }
+      .feature-icon {
+        font-size: 2rem;
+        color: var(--secondary-color);
+      }
+      .bg-light {
+        background-color: #f8f9fa !important;
+      }
+      .learn_more {
+        background-color: #04995b !important;
+        color: white !important;
+      }
+      .hero p {
+        font-size: 25px;
+        max-width: 600px;
+        margin: 0 auto 2rem;
+      }
+    </style>
+
+    <!-- Internal CSS End -->
+  </head>
+  <body>
+    <!-- Header Start -->
+    <header id="header"></header>
+
+    <!-- Header End -->
+
+    <!-- Hero Section Start -->
+    <header class="hero d-flex align-items-center" style="z-index: -2">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content text-center text-white">
+        <h1 class="display-4 fw-bold mb-4">Versatile Vans for Every Need</h1>
+        <p class="lead mb-4">
+          Spacious, practical, and perfect for families or businesses
+        </p>
+      </div>
+    </header>
+
+    <!-- Hero Section End -->
+
+    <!-- Featured Vans Start -->
+    <main>
+      <section id="featured-vans" class="py-5">
+        <div class="container">
+          <h2 class="text-center mb-5">Featured Vans</h2>
+          <div class="row">
+            <div class="col-md-4 mb-4">
+              <div class="card">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQblvAivVPqmyaoXcorqbH-SlR8jl5XSt17uA&s"
+                  class="card-img-top"
+                  alt="Van 1"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">2023 Family Voyager</h5>
+                  <p class="card-text">
+                    Spacious interior with advanced safety features.
+                  </p>
+                  <a href="learmore.html" class="btn learn_more">Learn More</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrjnBOzkxf2m1Dd-vlFJMOQcNEqXDMJwH9YA&s"
+                  class="card-img-top"
+                  alt="Van 2"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">2022 Cargo Master</h5>
+                  <p class="card-text">
+                    Versatile and efficient for all your business needs.
+                  </p>
+                  <a href="learmore.html" class="btn learn_more">Learn More</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9BO_ExwnG5d3ijeSITKBqMJ4ouYKn8z3RoA&s"
+                  class="card-img-top"
+                  alt="Van 3"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">2023 Adventure Van</h5>
+                  <p class="card-text">
+                    Ready for your next road trip or camping adventure.
+                  </p>
+                  <a href="learmore.html" class="btn learn_more">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Featured Vans End -->
+
+      <!-- Why Choose Sectin Start -->
+      <section class="bg-light py-5">
+        <div class="container">
+          <h2 class="text-center mb-5">Why Choose Our Vans?</h2>
+          <div class="row">
+            <div class="col-md-4 mb-4">
+              <div class="text-center">
+                <i class="fas fa-users feature-icon mb-3"></i>
+                <h3>Spacious Interiors</h3>
+                <p>Plenty of room for passengers and cargo.</p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="text-center">
+                <i class="fas fa-cogs feature-icon mb-3"></i>
+                <h3>Versatility</h3>
+                <p>Adaptable configurations for various needs.</p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="text-center">
+                <i class="fas fa-gas-pump feature-icon mb-3"></i>
+                <h3>Fuel Efficiency</h3>
+                <p>Economical options for long-distance travel.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Why Choose Sectin Start -->
+
+    <!-- Footer Start -->
+    <div>
+      <section class="cta-section text-center">
+        <div class="container">
+          <h1 class="mb-4 ready_find">Ready to Find Your Perfect Car?</h1>
+          <p class="lead mb-4">
+            Join thousands of satisfied customers who found their dream
+            <br />cars with CARVAN.
+          </p>
+          <a href="rang_of_cars.html" class="btn bg_search_ready btn-lg"
+            >Start Your Search Now</a
+          >
+        </div>
+      </section>
+    </div>
+
+    <footer id="footer"></footer>
+
+    <!-- Footer Start -->
+
+    <!-- Bootstrap JS CDN Link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Header Slicing in JS -->
+    <script src="header.js"></script>
+
+    <!-- Footer Slicing in JS -->
+    <script src="footer.js"></script>
+
+    <!-- JS File Link -->
+    <script src="script.js"></script>
+  </body>
+</html>

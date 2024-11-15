@@ -1,0 +1,130 @@
+body {
+  font-family: Arial, sans-serif;
+  color: #ffffff;
+  background-color: var(--secondary-color);
+}
+.hero {
+  background-image: url("https://www.karlchevy.com/static/brand-chevrolet/cpo/cpo-benefits.jpg?width=720");
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  position: relative;
+}
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.h5,
+h5 {
+  font-size: 1.25rem;
+  color: white !important;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+.btn-primary:hover {
+  background-color: #038050;
+  border-color: #038050;
+}
+.search-section {
+  background-color: var(--primary-color);
+}
+.search-section input {
+  border: none;
+}
+.search-section .btn {
+  background-color: var(--secondary-color);
+  color: #ffffff;
+}
+.featured-car {
+  background-color: #022341;
+}
+.featured-car img {
+  height: 200px;
+  object-fit: cover;
+}
+.testimonial {
+  background-color: #ffffff;
+  color: var(--secondary-color);
+}
+.testimonial img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+.text-primary {
+  --bs-text-opacity: 1;
+  color: white !important;
+}
+
+.search-section {
+  background-color: #011627 !important;
+  color: white !important;
+}
+
+a.btn.btn-primary.btn-lg {
+  background-color: #04995b;
+  border: none !important;
+}
+
+button.btn.w-100 {
+  background-color: #04995b !important;
+}
+
+.row.g-3 {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.search-section input {
+  border: 2px solid #b7a9a9;
+}
+
+a.btn.btn-primary.btn-sm {
+  background-color: #04995b;
+  border: none;
+}
+
+.marginb {
+  margin-bottom: 70px !important;
+  font-size: 50px !important;
+  font-weight: 700 !important;
+}
+
+h3.h6.mb-0 {
+  color: black !important;
+}
+
+p.mb-0 {
+  color: #5b4e4e !important;
+}
+
+.search-section_1 {
+  background-color: #f8f9fa !important;
+  color: rgb(17, 17, 17) !important;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.testimonial {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+.testimonial:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+p.text-muted.small {
+  color: white !important;
+}

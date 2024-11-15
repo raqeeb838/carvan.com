@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARVAN Website</title>
+ <!-- modal bootstrap -->
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <!-- end modal -->
+    <!-- link favicon icon -->
+    <link rel="shortcut icon" href="images/car_favicon.avif" type="image/x-icon">
+
+    <!-- Bootstrap CDN FIle -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Fonts Family CDN Link -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Fonte Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <!-- Fonte Awesome CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"> 
+
+    <!-- CSS File Link -->
+    <link rel="stylesheet" href="style.css">
+<!-- modal css -->
+    <style>
+        .car-card {
+          transition: transform 0.3s ease-in-out;
+        }
+        .car-card:hover {
+          transform: translateY(-5px);
+        }
+        .modal.fade .modal-dialog {
+          transition: transform 0.3s ease-out;
+          transform: translate(0, -50px);
+        }
+        .modal.show .modal-dialog {
+          transform: none;
+        }
+        .modal-content {
+          border: none;
+          border-radius: 15px;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        .modal-header {
+          border-bottom: none;
+        }
+        .modal-footer {
+          border-top: none;
+        }
+        .btn-close:focus {
+          box-shadow: none;
+        }
+        .car-details {
+          font-size: 0.9rem;
+        }
+        .car-info {
+          font-size: 0.8rem;
+          color: #6c757d;
+        }
+      </style>
+
+</head>
+
+<body>
+
+  <!-- Header Start -->
+        <header id="header">
+            
+        </header>
+  <!-- Header End -->
+  
+<!-- Hero Section Start -->
+    <main>
+        <section class="hero-section">
+            <div class="container text-center">
+                <h1 class="hero-title">Find Your <span class="car_short">Dream Car</span></h1>
+                <p class="hero-subtitle">Carvan the largest online car marketplace</p>
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <form class="search-form">
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <select class="form-select" aria-label="Select brand">
+                                        <option selected>Select Brand</option>
+                                        <option value="1">Toyota</option>
+                                        <option value="2">Honda</option>
+                                        <option value="3">Ford</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <select class="form-select" aria-label="Select model">
+                                        <option selected>Select Model</option>
+                                        <option value="1">Sedan</option>
+                                        <option value="2">SUV</option>
+                                        <option value="3">Truck</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <a href="rang_of_cars.html"> <button type="submit" class="hero_btn1 btn text-white w-100">Search</button></a>
+                                   
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- Featured section Start"> -->
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Featured Cars at CARVAN</h1>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card car-card">
+          <img
+            src="images/luxury_sedan.avif" class="card-img-top car-image" alt="Luxury Sedan"
+            class="card-img-top"
+            alt="Executive S 2023"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Executive S 2023</h5>
+            <p class="card-text mb-1">$35,000</p>
+            <p class="car-info mb-2">
+              <span class="me-2"><i class="bi bi-fuel-pump"></i> 28 mpg</span>
+              <span class="me-2"><i class="bi bi-people"></i> 5 seats</span>
+              <span><i class="bi bi-stopwatch"></i> 5.2s 0-60</span>
+            </p>
+            <button
+              class="btn btn-success"
+              data-bs-toggle="modal"
+              data-bs-target="#carModal"
+              data-car-name="Executive S 2023"
+              data-car-price="$35,000"
+              data-car-details="0-60 mph: 5.2s, 28 mpg combined, 8-speed automatic"
+              data-car-fuel="28 mpg"
+              data-car-seats="5 seats"
+              data-car-timing="5.2s 0-60"
+            >
+              View Details
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card car-card">
+          <img
+            src="images/sedan luxury.webp" class="card-img-top car-image" alt="Compact Car"
+            class="card-img-top"
+            alt="Compact Y 2023"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Compact Y 2023</h5>
+            <p class="card-text mb-1">$18,000</p>
+            <p class="car-info mb-2">
+              <span class="me-2"><i class="bi bi-fuel-pump"></i> 40 mpg</span>
+              <span class="me-2"><i class="bi bi-people"></i> 5 seats</span>
+              <span><i class="bi bi-stopwatch"></i> 7.5s 0-60</span>
+            </p>
+            <button
+              class="btn btn-success"
+              data-bs-toggle="modal"
+              data-bs-target="#carModal"
+              data-car-name="Compact Y 2023"
+              data-car-price="$18,000"
+              data-car-details="40 mpg combined, Hybrid powertrain, Smart connectivity"
+              data-car-fuel="40 mpg"
+              data-car-seats="5 seats"
+              data-car-timing="7.5s 0-60"
+            >
+              View Details
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card car-card">
+          <img
+            src="images/van.webp" class="card-img-top car-image" alt="Family Van"
+            class="card-img-top"
+            alt="Family Van 2023"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Family Van 2023</h5>
+            <p class="card-text mb-1">$32,000</p>
+            <p class="car-info mb-2">
+              <span class="me-2"><i class="bi bi-fuel-pump"></i> 22 mpg</span>
+              <span class="me-2"><i class="bi bi-people"></i> 8 seats</span>
+              <span><i class="bi bi-stopwatch"></i> 8.5s 0-60</span>
+            </p>
+            <button
+              class="btn btn-success"
+              data-bs-toggle="modal"
+              data-bs-target="#carModal"
+              data-car-name="Family Van 2023"
+              data-car-price="$32,000"
+              data-car-details="Seats up to 8, Ample cargo space, Top safety pick"
+              data-car-fuel="22 mpg"
+              data-car-seats="8 seats"
+              data-car-timing="8.5s 0-60"
+            >
+              View Details
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+
+  <div
+    class="modal fade"
+    id="carModal"
+    tabindex="-1"
+    aria-labelledby="carModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="carModalLabel">Car Details</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <img
+            src="file:///D:/1st%20Semester%20Project/Carvan%20Website/images/e-motion_car.jpeg"
+            class="img-fluid rounded mb-3"
+            alt="Car Image"
+          />
+          <h3 id="carName"></h3>
+          <h4 id="carPrice" class="text-success"></h4>
+          <p class="car-info mb-3">
+            <span id="carFuel" class="me-3"
+              ><i class="bi bi-fuel-pump"></i
+            ></span>
+            <span id="carSeats" class="me-3"
+              ><i class="bi bi-people"></i
+            ></span>
+            <span id="carTiming"><i class="bi bi-stopwatch"></i></span>
+          </p>
+          <p id="carDetails" class="car-details mt-3"></p>
+        </div>
+
+
+
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+          <button type="button" class="btn btn-success">
+            Contact Seller
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MOdal Section 2-->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card car-card">
+          <img
+            src="images/adventure.jpg" class="card-img-top car-image" alt="Off-road SUV"
+            class="card-img-top"
+            alt="Executive S 2023"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Adventure X 2023</h5>
+            <p class="card-text mb-1">$40,000 </p>
+            <p class="car-info mb-2">
+              <span class="me-2"><i class="bi bi-fuel-pump"></i> 28 mpg</span>
+              <span class="me-2"><i class="bi bi-people"></i> 5 seats</span>
+              <span><i class="bi bi-stopwatch"></i> 5.2s 0-60</span>
+            </p>
+            <button
+              class="btn btn-success"
+              data-bs-toggle="modal"
+              data-bs-target="#carModal"
+              data-car-name="Executive S 2023"
+              data-car-price="$35,000"
+              data-car-details="0-60 mph: 5.2s, 28 mpg combined, 8-speed automatic"
+              data-car-fuel="28 mpg"
+              data-car-seats="5 seats"
+              data-car-timing="5.2s 0-60"
+            >
+              View Details
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card car-card">
+          <img
+            src="images/cruiser.avif" class="card-img-top car-image" alt="City Car"
+            class="card-img-top"
+            alt="Compact Y 2023"
+          />
+          <div class="card-body">
+            <h5 class="card-title">City Cruiser 2023</h5>
+            <p class="card-text mb-1">$18,000</p>
+            <p class="car-info mb-2">
+              <span class="me-2"><i class="bi bi-fuel-pump"></i> 40 mpg</span>
+              <span class="me-2"><i class="bi bi-people"></i> 5 seats</span>
+              <span><i class="bi bi-stopwatch"></i> 7.5s 0-60</span>
+            </p>
+            <button
+              class="btn btn-success"
+              data-bs-toggle="modal"
+              data-bs-target="#carModal"
+              data-car-name="Compact Y 2023"
+              data-car-price="$18,000"
+              data-car-details="40 mpg combined, Hybrid powertrain, Smart connectivity"
+              data-car-fuel="40 mpg"
+              data-car-seats="5 seats"
+              data-car-timing="7.5s 0-60"
+            >
+              View Details
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card car-card">
+          <img
+            src="images/e-motion_car.jpeg" class="card-img-top car-image" alt="Electric Car"
+            class="card-img-top"
+            alt="Family Van 2023"
+          />
+          <div class="card-body">
+            <h5 class="card-title">E-Motion 2023</h5>
+            <p class="card-text mb-1">$32,000</p>
+            <p class="car-info mb-2">
+              <span class="me-2"><i class="bi bi-fuel-pump"></i> 22 mpg</span>
+              <span class="me-2"><i class="bi bi-people"></i> 8 seats</span>
+              <span><i class="bi bi-stopwatch"></i> 8.5s 0-60</span>
+            </p>
+            <button
+              class="btn btn-success"
+              data-bs-toggle="modal"
+              data-bs-target="#carModal"
+              data-car-name="Family Van 2023"
+              data-car-price="$32,000"
+              data-car-details="Seats up to 8, Ample cargo space, Top safety pick"
+              data-car-fuel="22 mpg"
+              data-car-seats="8 seats"
+              data-car-timing="8.5s 0-60"
+            >
+              View Details
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+ 
+
+  
+  <!-- Modal -->
+
+
+  <div
+    class="modal fade"
+    id="carModal"
+    tabindex="-1"
+    aria-labelledby="carModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="carModalLabel">Car Details</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <img
+            src="images/e-motion_car.jpeg" class="card-img-top car-image" alt="Electric Car"
+            class="img-fluid rounded mb-3"
+            alt="Car Image"
+          />
+          <h3 id="carName"></h3>
+          <h4 id="carPrice" class="text-success"></h4>
+          <p class="car-info mb-3">
+            <span id="carFuel" class="me-3"
+              ><i class="bi bi-fuel-pump"></i
+            ></span>
+            <span id="carSeats" class="me-3"
+              ><i class="bi bi-people"></i
+            ></span>
+            <span id="carTiming"><i class="bi bi-stopwatch"></i></span>
+          </p>
+          <p id="carDetails" class="car-details mt-3"></p>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+          <button type="button" class="btn btn-success">
+            Contact Seller
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<!-- Featured section End"> -->
+
+
+<!-- Brands Section Start -->
+<div class="main_div">
+<div class="container my-5">
+    <h1 class="mb-4 fea_brand text-center">Featured Brands</h1>
+    <div class="col_padding row g-4">
+        <div class="col-6 col-md-4 col-lg-2">
+            <div class="brand-card">
+                <div class="brand-logo toyota_img"><a href="
+                    https://www.toyota.com/"><img src="images/toyota_logo.png" alt=""  width="110px"></div></a>
+                <h5>Toyota</h5>
+            </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+            <div class="brand-card">
+                <div class="brand-logo"><a href="https://honda.com.pk/"><img src="images/honda.jfif" alt="" width="100px"></div></a>
+                <h5>Honda</h5>
+            </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+            <div class="brand-card">
+                <div class="brand-logo"><a href="https://www.ford.com/"><img src="images/ford.jpg" alt="" width="100px"></div></a>
+                <h5>Ford</h5>
+            </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+            <div class="brand-card">
+                <div class="brand-logo"><a href="https://www.bmw.com/en/index.html"><img src="images/bmw.png" alt=""  width="100px"></div></a>
+                <h5>BMW</h5>
+            </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+            <div class="brand-card">
+                <div class="brand-logo"><a href="https://www.mercedes-benz.com/en/"><img src="images/mer.jfif" alt=""  width="115px" class="mercedes"></div></a>
+                <h5>Mercedes</h5>
+            </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+            <div class="brand-card">
+                <div class="brand-logo"><a href="https://www.audi.com.pk/sea/web/pk.html"><img src="images/audi.jfif" alt=""  width="100px"></div></a>
+                <h5>Audi</h5>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- Brands Section End -->
+
+
+<!-- Testimonial Section Start -->
+        <section class="testimonial-section">
+            <div class="container">
+                <h2 class="section-title text-center text-white">What Our Customers Say</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="testimonial-card">
+                            <p>"CARVAN made finding my dream car a breeze. Their selection and customer service are unmatched!"</p>
+                            <p class="fw-bold mt-3">- John Doe</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="testimonial-card">
+                            <p>"I was impressed by the range of options and the ease of the buying process. Highly recommended!"</p>
+                            <p class="fw-bold mt-3">- Jane Smith</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="testimonial-card">
+                            <p>"The best place to find quality pre-owned vehicles. I couldn't be happier with my purchase!"</p>
+                            <p class="fw-bold mt-3">- Mike Johnson</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+ <!-- Testimonial Section End -->
+
+
+
+<!-- Faqs Section Start -->
+
+<div class="main_div_faqs container-fluid">
+
+
+    <div class="container faqs">
+        <h1 class="faqs_h1">Frequently Asked Questions</h1>
+        
+        <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                        What is CARVAN?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        CARVAN is the largest online car market, catering to the needs of families, businesses, and individuals. We provide detailed information and specifications about various car models offered by different companies.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                        How does CARVAN work?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        CARVAN works by connecting car buyers with detailed information about various car models, specifications, and prices. Users can browse through different categories, compare cars, and make informed decisions about their purchases.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                        Do I need a lot of technical experience to use CARVAN?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        No, you don't need any technical experience to use CARVAN. Our website is designed to be user-friendly and intuitive. Whether you're a first-time car buyer or an experienced enthusiast, you can easily navigate through our platform to find the information you need.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                        How can I contact CARVAN for support?
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        You can contact CARVAN for support through our 'Contact Us' page. There, you'll find our company address and an email link. Clicking on the email address will open your default email client, allowing you to send us a message directly. We strive to respond to all inquiries within 24 hours.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   </div>
+
+<!-- Faqs Section End -->
+
+
+
+<!-- Footer start -->
+
+<div>
+    <section class="cta-section text-center">
+        <div class="container">
+            <h1 class="mb-4 ready_find">Ready to Find Your Perfect Car?</h1>
+            <p class="lead mb-4">Join thousands of satisfied customers who found their dream <br>cars with CARVAN.</p>
+            <a href="rang_of_cars.html" class="btn bg_search_ready btn-lg">Start Your Search Now</a>
+        </div>
+    </section>
+</div>
+  
+<footer id="footer"></footer>
+  <!-- Footer end-->
+
+
+ <!-- Bootstrap JS CDN Link -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Header Slicing in JS -->
+<script src="header.js"></script>
+
+
+<!-- Footer Slicing in JS -->
+<script src="footer.js"></script>
+
+<!-- JS File Link -->
+ <script src="script.js"></script>
+
+
+<!-- Modal Linking -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+  /> 
+
+ <!-- modal -->
+<script>
+     document.addEventListener("DOMContentLoaded", function () {
+        var carModal = document.getElementById("carModal");
+        carModal.addEventListener("show.bs.modal", function (event) {
+          var button = event.relatedTarget;
+          var carName = button.getAttribute("data-car-name");
+          var carPrice = button.getAttribute("data-car-price");
+          var carDetails = button.getAttribute("data-car-details");
+          var carFuel = button.getAttribute("data-car-fuel");
+          var carSeats = button.getAttribute("data-car-seats");
+          var carTiming = button.getAttribute("data-car-timing");
+
+          var modalTitle = carModal.querySelector(".modal-title");
+          var carNameElement = carModal.querySelector("#carName");
+          var carPriceElement = carModal.querySelector("#carPrice");
+          var carDetailsElement = carModal.querySelector("#carDetails");
+          var carFuelElement = carModal.querySelector("#carFuel");
+          var carSeatsElement = carModal.querySelector("#carSeats");
+          var carTimingElement = carModal.querySelector("#carTiming");
+
+          modalTitle.textContent = carName + " Details";
+          carNameElement.textContent = carName;
+          carPriceElement.textContent = carPrice;
+          carDetailsElement.textContent = carDetails;
+          carFuelElement.innerHTML =
+            '<i class="bi bi-fuel-pump"></i> ' + carFuel;
+          carSeatsElement.innerHTML =
+            '<i class="bi bi-people"></i> ' + carSeats;
+          carTimingElement.innerHTML =
+            '<i class="bi bi-stopwatch"></i> ' + carTiming;
+        });
+      });
+</script>
+
+</body>
+</html>
+
+
+
+

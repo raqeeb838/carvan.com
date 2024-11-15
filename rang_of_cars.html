@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Range of Cars</title>
+
+    <!-- link favicon icon -->
+    <link
+      rel="shortcut icon"
+      href="images/car_favicon.avif"
+      type="image/x-icon"
+    />
+
+    <!-- Fonte Awesome CDN -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- icon link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+
+    <!-- Bootstrap CDN FIle -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Fonte Awesome CDN -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- moda? -->
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="carModal"
+      tabindex="-1"
+      aria-labelledby="carModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="carModalLabel">Car Details</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6">
+                <img
+                  src="images/luxury_car.jpg"
+                  class="img-fluid rounded"
+                  alt="Car Model"
+                  id="carImage"
+                />
+              </div>
+              <div class="col-md-6">
+                <h2 id="carName" class="mb-3"></h2>
+                <h4 id="carPrice" class="text-success mb-3"></h4>
+                <p class="mb-3">
+                  <span id="carFuel" class="me-3"
+                    ><i class="bi bi-fuel-pump"></i
+                  ></span>
+                  <span id="carSeats" class="me-3"
+                    ><i class="bi bi-people"></i
+                  ></span>
+                  <span id="carTiming"><i class="bi bi-stopwatch"></i></span>
+                </p>
+                <p id="carDescription" class="mb-3"></p>
+                <h5>Features:</h5>
+                <ul id="carFeatures" class="list-unstyled">
+                  <!-- Features will be dynamically added here -->
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-success">
+              Contact Seller
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CSS File Link -->
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      button.btn.btn-primary {
+        background-color: #04995b !important;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header Start -->
+    <header id="header"></header>
+
+    <!-- Header End -->
+
+    <!-- Start Hero Section -->
+    <main class="rang_bg">
+      <section class="py-5">
+        <div class="container">
+          <h1 class="section-title text-center mb-5">Our Range of Cars</h1>
+          <div class="row">
+            <div class="col-md-3 mb-4">
+              <div class="list-group">
+                <a
+                  href="#"
+                  class="list-group-item list-group-item-action active learn_more1"
+                  aria-current="true"
+                >
+                  All Cars
+                </a>
+                <a href="#" class="list-group-item list-group-item-action"
+                  >Small Cars</a
+                >
+                <a href="#" class="list-group-item list-group-item-action"
+                  >Sedans</a
+                >
+                <a href="#" class="list-group-item list-group-item-action"
+                  >SUVs</a
+                >
+                <a href="#" class="list-group-item list-group-item-action"
+                  >Vans</a
+                >
+                <a href="#" class="list-group-item list-group-item-action"
+                  >Jeeps</a
+                >
+                <a href="#" class="list-group-item list-group-item-action"
+                  >Luxury Cars</a
+                >
+              </div>
+            </div>
+            <div class="col-md-9">
+              <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                  <div class="card h-100">
+                    <img
+                      src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60"
+                      class="card-img-top"
+                      alt="Small Car"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Small Car Model</h5>
+                      <p class="card-text">
+                        Efficient and easy to park, perfect for city driving.
+                      </p>
+                      <button
+                        type="button"
+                        class="btn btn-primary"
+                        data-bs-toggle="modal"
+                        data-bs-target="#carModal"
+                        data-car='{"name":"Car Model","price":"$30,000","image":"car-image-url.jpg","fuel":"30 mpg","seats":"5","timing":"6.5s 0-60","description":"A great car with many features.","features":["Feature 1","Feature 2","Feature 3"]}'
+                      >
+                        View Car Details
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <img
+                      src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60"
+                      class="card-img-top"
+                      alt="Sedan"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Sedan Model</h5>
+                      <p class="card-text">
+                        Comfortable and stylish, great for everyday use.
+                      </p>
+                      <button
+                        type="button"
+                        class="btn btn-primary"
+                        data-bs-toggle="modal"
+                        data-bs-target="#carModal"
+                        data-car='{"name":"Car Model","price":"$30,000","image":"car-image-url.jpg","fuel":"30 mpg","seats":"5","timing":"6.5s 0-60","description":"A great car with many features.","features":["Feature 1","Feature 2","Feature 3"]}'
+                      >
+                        View Car Details
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <img
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmBxQeLbbK_VaNEnrVrABM5g04wkX-WUQ_Eg&s"
+                      class="card-img-top"
+                      alt="SUV"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">SUV Model</h5>
+                      <p class="card-text">
+                        Spacious and versatile, perfect for families and
+                        adventures.
+                      </p>
+                      <button
+                        type="button"
+                        class="btn btn-primary"
+                        data-bs-toggle="modal"
+                        data-bs-target="#carModal"
+                        data-car='{"name":"Car Model","price":"$30,000","image":"car-image-url.jpg","fuel":"30 mpg","seats":"5","timing":"6.5s 0-60","description":"A great car with many features.","features":["Feature 1","Feature 2","Feature 3"]}'
+                      >
+                        View Car Details
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <img
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQblvAivVPqmyaoXcorqbH-SlR8jl5XSt17uA&s"
+                      class="card-img-top"
+                      alt="Van"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Van Model</h5>
+                      <p class="card-text">
+                        Ideal for large families or business transportation
+                        needs.
+                      </p>
+                      <button
+                        type="button"
+                        class="btn btn-primary"
+                        data-bs-toggle="modal"
+                        data-bs-target="#carModal"
+                        data-car='{"name":"Car Model","price":"$30,000","image":"car-image-url.jpg","fuel":"30 mpg","seats":"5","timing":"6.5s 0-60","description":"A great car with many features.","features":["Feature 1","Feature 2","Feature 3"]}'
+                      >
+                        View Car Details
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <img
+                      src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60"
+                      class="card-img-top"
+                      alt="Jeep"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Jeep Model</h5>
+                      <p class="card-text">
+                        Rugged and capable, built for off-road adventures.
+                      </p>
+                      <button
+                        type="button"
+                        class="btn btn-primary"
+                        data-bs-toggle="modal"
+                        data-bs-target="#carModal"
+                        data-car='{"name":"Car Model","price":"$30,000","image":"car-image-url.jpg","fuel":"30 mpg","seats":"5","timing":"6.5s 0-60","description":"A great car with many features.","features":["Feature 1","Feature 2","Feature 3"]}'
+                      >
+                        View Car Details
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <img
+                      src="images/luxury_sedan.avif"
+                      class="card-img-top"
+                      alt="Luxury Car"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Luxury Car Model</h5>
+                      <p class="card-text">
+                        Premium features and exquisite design for the discerning
+                        driver.
+                      </p>
+                      <button
+                        type="button"
+                        class="btn btn-primary"
+                        data-bs-toggle="modal"
+                        data-bs-target="#carModal"
+                        data-car='{"name":"Car Model","price":"$30,000","image":"car-image-url.jpg","fuel":"30 mpg","seats":"5","timing":"6.5s 0-60","description":"A great car with many features.","features":["Feature 1","Feature 2","Feature 3"]}'
+                      >
+                        View Car Details
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- End Hero Section -->
+
+    <!-- footer start -->
+    <div>
+      <section class="cta-section text-center">
+        <div class="container">
+          <h2 class="mb-4 ready_find">Ready to Find Your Perfect Car?</h2>
+          <p class="lead mb-4">
+            Join thousands of satisfied customers who found their dream <br />
+            with CARVAN.
+          </p>
+          <a href="rang_of_cars.html" class="btn bg_search_ready btn-lg"
+            >Start Your Search Now</a
+          >
+        </div>
+      </section>
+    </div>
+
+    <footer id="footer"></footer>
+    <!-- footer end-->
+
+    <!-- Bootstrap JS CDN Link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Header Slicing in JS -->
+    <script src="header.js"></script>
+
+    <!-- Footer Slicing in JS -->
+    <script src="footer.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var carModal = document.getElementById("carModal");
+        carModal.addEventListener("show.bs.modal", function (event) {
+          var button = event.relatedTarget;
+          var carData = JSON.parse(button.getAttribute("data-car"));
+
+          var modalTitle = carModal.querySelector(".modal-title");
+          var carNameElement = carModal.querySelector("#carName");
+          var carPriceElement = carModal.querySelector("#carPrice");
+          var carImageElement = carModal.querySelector("#carImage");
+          var carFuelElement = carModal.querySelector("#carFuel");
+          var carSeatsElement = carModal.querySelector("#carSeats");
+          var carTimingElement = carModal.querySelector("#carTiming");
+          var carDescriptionElement = carModal.querySelector("#carDescription");
+          var carFeaturesElement = carModal.querySelector("#carFeatures");
+
+          modalTitle.textContent = carData.name + " Details";
+          carNameElement.textContent = carData.name;
+          carPriceElement.textContent = carData.price;
+          carImageElement.alt = carData.name;
+          carFuelElement.innerHTML =
+            '<i class="bi bi-fuel-pump"></i> ' + carData.fuel;
+          carSeatsElement.innerHTML =
+            '<i class="bi bi-people"></i> ' + carData.seats;
+          carTimingElement.innerHTML =
+            '<i class="bi bi-stopwatch"></i> ' + carData.timing;
+          carDescriptionElement.textContent = carData.description;
+
+          // Clear previous features
+          carFeaturesElement.innerHTML = "";
+          // Add new features
+          carData.features.forEach(function (feature) {
+            var li = document.createElement("li");
+            li.innerHTML =
+              '<i class="bi bi-check-circle-fill text-success me-2"></i>' +
+              feature;
+            carFeaturesElement.appendChild(li);
+          });
+        });
+      });
+    </script>
+
+    <!-- JS File Link -->
+    <script src="script.js"></script>
+    <!-- modal linking -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+    />
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Modal functionality script -->
+  </body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sedan Cars</title>
+
+    <!-- link favicon icon -->
+    <link
+      rel="shortcut icon"
+      href="images/car_favicon.avif"
+      type="image/x-icon"
+    />
+    <!-- Bootstrap CDN FIle -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Fonts Family CDN Link -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- CSS File Link -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Internal CSS Start -->
+    <style>
+      :root {
+        --primary-color: #04995b;
+        --secondary-color: #ff6b35;
+        --dark-color: #011627;
+        --light-color: #ffffff;
+      }
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: var(--light-color);
+        color: var(--dark-color);
+      }
+      .navbar {
+        background-color: var(--dark-color);
+      }
+      .navbar-brand,
+      .nav-link {
+        color: var(--light-color) !important;
+      }
+      .hero {
+        background-image: url("https://cdn-fastly.thetruthaboutcars.com/media/2022/06/30/8816684/2019-honda-accord-sport-2-0t-the-long-awaited-sixth-generation-prelude-si.jpg?size=720x845&nocrop=1");
+        background-size: cover;
+        background-position: center;
+        height: 75vh;
+        position: relative;
+      }
+      .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+      }
+      .hero-content {
+        position: relative;
+        z-index: 1;
+      }
+      .card {
+        transition: transform 0.3s;
+        border-color: var(--primary-color);
+      }
+      .card:hover {
+        transform: scale(1.05);
+      }
+      .feature-icon {
+        font-size: 2rem;
+        color: var(--secondary-color);
+      }
+      .bg-light {
+        background-color: #f8f9fa !important;
+      }
+      .learn_more {
+        background-color: #04995b !important;
+        color: white !important;
+      }
+      .hero p {
+        font-size: 25px;
+        max-width: 600px;
+        margin: 0 auto 2rem;
+      }
+    </style>
+
+    <!-- Internal CSS End -->
+  </head>
+  <body>
+    <!-- Header Start -->
+    <header id="header"></header>
+
+    <!-- Header End -->
+
+    <!-- Hero Section Start -->
+    <header class="hero d-flex align-items-center" style="z-index: -2">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content text-center text-white">
+        <h1 class="display-4 fw-bold pt-4">Experience Luxury in Our Sedans</h1>
+
+        <p class="lead mb-4">Comfort, style, and performance in every ride</p>
+        <!-- Hero Section End -->
+        <div class="container p-5 search_bg"></div>
+      </div>
+    </header>
+
+    <!-- Feature Sedans Start-->
+    <main>
+      <section id="featured-sedans" class="py-5">
+        <div class="container">
+          <h2 class="text-center mb-5">Featured Sedans</h2>
+          <div class="row">
+            <div class="col-md-4 mb-4">
+              <div class="card">
+                <img
+                  src="https://images.unsplash.com/photo-1550355291-bbee04a92027?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60"
+                  class="card-img-top"
+                  alt="Sedan 1"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">2023 Luxury Cruiser</h5>
+                  <p class="card-text">
+                    Elegant design with cutting-edge technology.
+                  </p>
+                  <a href="learmore.html" class="btn learn_more">Learn More</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card">
+                <img
+                  src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60"
+                  class="card-img-top"
+                  alt="Sedan 2"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">2022 Executive Class</h5>
+                  <p class="card-text">
+                    Premium comfort for the discerning driver.
+                  </p>
+                  <a href="learmore.html" class="btn learn_more">Learn More</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card">
+                <img
+                  src="https://images.unsplash.com/photo-1617469767053-d3b523a0b982?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60"
+                  class="card-img-top"
+                  alt="Sedan 3"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">2023 Sport Sedan</h5>
+                  <p class="card-text">
+                    Performance and luxury in perfect harmony.
+                  </p>
+                  <a href="learmore.html" class="btn learn_more">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Feature Sedans End -->
+
+      <!-- Why Choose Section Start -->
+      <section class="bg-light py-5">
+        <div class="container">
+          <h2 class="text-center mb-5">Why Choose Our Sedans?</h2>
+          <div class="row">
+            <div class="col-md-4 mb-4">
+              <div class="text-center">
+                <i class="fas fa-couch feature-icon mb-3"></i>
+                <h3>Supreme Comfort</h3>
+                <p>Enjoy luxurious interiors and smooth rides.</p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="text-center">
+                <i class="fas fa-tachometer-alt feature-icon mb-3"></i>
+                <h3>Performance</h3>
+                <p>Experience power and efficiency in every drive.</p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="text-center">
+                <i class="fas fa-shield-alt feature-icon mb-3"></i>
+                <h3>Advanced Safety</h3>
+                <p>State-of-the-art safety features for peace of mind.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Why Choose Section End -->
+
+    <!-- Footer Start -->
+    <div>
+      <section class="cta-section text-center">
+        <div class="container">
+          <h1 class="mb-4 ready_find">Ready to Find Your Perfect Car?</h1>
+          <p class="lead mb-4">
+            Join thousands of satisfied customers who found their dream
+            <br />cars with CARVAN.
+          </p>
+          <a href="rang_of_cars.html" class="btn bg_search_ready btn-lg"
+            >Start Your Search Now</a
+          >
+        </div>
+      </section>
+    </div>
+
+    <footer id="footer"></footer>
+
+    <!-- Footer End -->
+
+    <!-- Bootstrap JS CDN Link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Header Slicing in JS -->
+    <script src="header.js"></script>
+
+    <!-- Footer Slicing in JS -->
+    <script src="footer.js"></script>
+
+    <!-- JS File Link -->
+    <script src="script.js"></script>
+  </body>
+</html>

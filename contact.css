@@ -1,0 +1,52 @@
+:root {
+  --color-primary: #04995b;
+  --color-secondary: #ff6b35;
+  --color-light: #f1faee;
+  --color-dark: #011627;
+}
+body {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+}
+.navbar {
+  background-color: var(--color-dark);
+}
+.navbar-brand,
+.nav-link {
+  color: var(--color-light) !important;
+}
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(images/get_in_touch.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  height: 350px;
+  display: flex;
+  align-items: center;
+}
+.contact-form {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+.btn-primary {
+  background-color: var(--color-secondary);
+  border-color: var(--color-secondary);
+}
+.btn-primary:hover {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+.contact-info {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  border-radius: 15px;
+}
+.contact-info a {
+  color: var(--color-secondary);
+}
+.contact-info a:hover {
+  color: var(--color-light);
+}
